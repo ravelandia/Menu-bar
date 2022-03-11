@@ -1,0 +1,82 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper{
+    height: 100%;
+    width: 300px;
+    position: relative;
+}
+
+.wrapper .menu-btn{
+    position: absolute;
+    background: #4a4a4a;
+    height: 45px;
+    width: 45px;
+    left: 20px;
+    top: 10px;
+    z-index: 9999;
+    border: 1px solid #333;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#btn:checked ~ .menu-btn{
+    left:247px
+}
+
+.sidebar{
+    background: #404040;
+    position: fixed;
+    height: 100%;
+    width: 270px;
+    left: -270px;
+    transition: all 0.3s ease;
+}
+
+#btn:checked ~ .sidebar{
+    left:0px;
+}
+
+.sidebar .title{
+    line-height: 65px;
+    text-align: center;
+    background-color: #333;
+    font-size: 25px;
+    font-weight: 600;
+    color: #f2f2f2;
+    border-bottom: 1px solid #222;
+}
+
+.sidebar .list-item{
+    padding-left: 0px;
+    line-height: 50px;
+    border-top: 1px solid rgb(255, 255, 255, 0.1);
+    border-bottom: 1px solid #333;
+}
+
+.sidebar .list-item li:hover{
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    box-shadow: 0 0px 10px 3px #222;
+}
+
+.sidebar .list-item li{
+    list-style: none;
+}
+
+.sidebar .list-item li a{
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    height: 100%;
+    width: 100%;
+    display: block;
+    margin-left: 20px;
+}
+
